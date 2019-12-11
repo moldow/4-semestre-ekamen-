@@ -11,50 +11,152 @@
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
 
+
+
     <!------- Style ----------->
 
 
 
     <style>
-        #Produktet,
-        #Opskrift,
-        #Some {
-            padding-top: 75px;
+        @font-face {
+            font-family: 'Bitstream';
+            src: url('fonte/Bitstream - FuturaBT Bold.otf');
+            src: url('Bitstream - FuturaBT Medium.otf');
+            src: url('Cyclone Background.otf');
         }
+
+        @font-face {
+            font-family: 'Bitstream';
+            src: url('fonte/Bitstream - FuturaBT Bold.otf');
+
+        }
+
+        h1 {
+            font-family: 'Cyclone';
+            font-size: 4em;
+        }
+
+
+
+
 
         body {
 
-
-            font-family: 'Roboto Condensed', sans-serif;
-        }
-
-
-        .baggrundssome {
-            background-color: #fab42a;
-
-        }
-
-        .baggrundsfarveopskrift {
-            background-color: #4e61aa;
-
-
-        }
-
-        .out {
-            width: 100%;
-            height: 800px;
-            background: url(Sk%C3%A6rmbillede%202019-11-29%20kl.%2010.05.00.png)no-repeat;
-            background-size: cover;
-        }
-
-        .this-div-kills-browsers {
-            height: 1000px;
-        }
-
-        body,
-        html {
-            height: 100%;
+            font-family: bitstream;
+            font-size: 12px;
             margin: 0;
+
+        }
+
+        img {
+            height: auto;
+            width: 200px;
+        }
+
+
+        .navbar {
+            overflow: auto;
+            background-color: #4E61AA;
+            position: fixed;
+            top: 0;
+            width: 100%;
+            z-index: 1000;
+        }
+
+        .navbar a {
+            float: left;
+            display: block;
+            color: #ffffff;
+            text-align: center;
+            padding: 14px 16px;
+            text-decoration: none;
+            font-size: 17px;
+        }
+
+        .navbar a:hover {
+
+            color: #FAB42A;
+        }
+
+
+        /*        flipcards*/
+
+        .flip-card {
+            background-color: transparent;
+            width: 300px;
+            height: 300px;
+            perspective: 1000px;
+        }
+
+        .flip-card-inner {
+            position: relative;
+            width: 100%;
+            height: 100%;
+            margin: 10px;
+            text-align: center;
+            transition: transform 0.6s;
+            transform-style: preserve-3d;
+            box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+        }
+
+        .flip-card:hover .flip-card-inner {
+            transform: rotateY(180deg);
+        }
+
+        .flip-card-front,
+        .flip-card-back {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            backface-visibility: hidden;
+        }
+
+        .flip-card-front {
+            background-color: #bbb;
+            color: black;
+        }
+
+        .flip-card-back {
+            background-color: #FAB42A;
+            color: white;
+            transform: rotateY(180deg);
+        }
+
+        /*        video*/
+
+        .video-container video {
+            position: relative;
+            width: 100%;
+
+        }
+
+        .video-container {
+            position: relative;
+            height: auto;
+            width: 100%;
+            overflow: hidden;
+        }
+
+
+        .overlay {
+            position: absolute;
+            background-color: rgba(0, 0, 0, 0.71);
+            width: 100%;
+            height: 100%;
+            bottom: 0;
+            left: 0;
+            z-index: 100;
+            display: none;
+        }
+
+        .button {
+            background-color: #4E61AA;
+            color: white;
+            padding: 15px 32px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 16px;
         }
     </style>
 
@@ -64,219 +166,237 @@
 
 <body>
 
-    <!------- navigations menu ----------->
-    <div class="container">
-        <div class="row-no-gutters">
-            <div class="col-md-12">
-                <nav class="navbar navbar-expand-lg navbar-light bg-light">
-                    <a class="navbar-brand" href="#"></a>
-                    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+    <!------- navigations menu - fixed menu ----------->
+    <div class="navbar">
+        <a href="#home">Home</a>
+        <a href="#news">News</a>
+        <a href="#contact">Contact</a>
+    </div>
 
-  </button>
-                    <div class="collapse navbar-collapse" id="navbarNav">
-                        <ul class="navbar-nav ml-auto">
-                            <li class="nav-item">
-                                <a class="nav-link" href="#Produktet">PRODUKTET <span class="sr-only">(current)</span></a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link" href="#Opskrift">OPSKRIFT</a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link" href="#Video">VIDEO OG SOME</a>
-                            </li>
+    <!------- navigations menu SLUT ----------->
 
-                        </ul>
-                    </div>
-                </nav>
+    <!--video-->
+    <div class="video-container">
+        <div class="overlay"></div>
+        <video src="rain.mp4" autoplay muted loop></video>
+
+    </div>
+
+
+    <!-------info om øllen ----------->
+
+
+    <div class="container" id="Produktet">
+        <div class="row">
+            <div class="col-md-4">
+                <br>
+                <p>Alkohol: 0,4% Server den ved 5 grader </p>
             </div>
+            <div class="col-md-4">
 
-        </div>
-        <!------- navigations menu SLUT ----------->
-
-        <div class="out">
-            <div class="inner">
+                <img class="special-effects" src="brooklyn-special-effects.jpg"> </div>
+            <div class="col-md-4">
+                <br>
+                <p>Special effects er en smagsfuld lager øl med skrællet grapefrugt og friske aromaer som giver øllen en ren bitter kant. Øllen er til mænd og kvinder og kan drikkes året rundt. Øllen er god sammen med: spinatsalater, grillet kylling, BLT-sandwich, toast, hotwings, æggekage/omelet og friske gedeost. Enjoy!</p>
             </div>
         </div>
-        <div class="this-div-kills-browsers">
+    </div>
+    <!------- drop down - mere info ----------->
+
+    <a href="#" class="button">Link Button</a>
+
+    <button class="button">Button</button>
+
+    <input type="button" class="button" value="Input Button">
+
+
+
+    <!------- how to - video ----------->
+
+    <div class="how_to">
+
+    </div>
+
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-6 col-md-3"> <img src="grapefruit-100.jpg" class="img-fluid" alt=""></div>
+            <div class="col-6 col-md-3"><img src="lemon-100.jpg" class="img-fluid" alt=""></div>
+            <div class="col-6 col-md-3"><img src="lime-100.jpg" class="img-fluid" alt=""></div>
+            <div class="col-6 col-md-3"><img src="yellowgrape-100.jpg" class="img-fluid" alt=""></div>
         </div>
     </div>
 
-    < <!------- karusel ----------->
+    <!------- Opskrifter - flipcards ----------->
 
 
-        <div class="row no-gutters">
-            <div class="col-md-12">
-                <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
-                    <ol class="carousel-indicators">
-                        <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
-                        <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
-                        <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
-                    </ol>
-                    <div class="carousel-inner">
-                        <div class="carousel-item active">
-                            <img src=" Sk%C3%A6rmbillede%202019-11-29%20kl.%2010.05.00.png" class="d-block w-100" alt="...">
+
+    <div class="container" id="Opskrift">
+        <div class="row">
+            <div class="col-md-4">
+
+                <div class="flip-card">
+                    <div class="flip-card-inner">
+                        <div class="flip-card-front">
+                            <img src="img_avatar.png" alt="Avatar" style="width:300px;height:300px;">
                         </div>
-                        <div class="carousel-item">
-                            <img src="Sk%C3%A6rmbillede%202019-11-29%20kl.%2010.05.00.png" class="d-block w-100" alt="...">
-                        </div>
-                        <div class="carousel-item">
-                            <img src="Sk%C3%A6rmbillede%202019-11-29%20kl.%2010.05.00.png" class="d-block w-100" alt="...">
+                        <div class="flip-card-back">
+                            <h1>Opskrift på pizzadej</h1>
+                            <p>Ingredienser:</p>
+
+                            <p>Sådan gør du: </p>
                         </div>
                     </div>
-                    <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
-    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-    <span class="sr-only">Previous</span>
-  </a>
-                    <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
-    <span class="carousel-control-next-icon" aria-hidden="true"></span>
-    <span class="sr-only">Next</span>
-  </a>
                 </div>
             </div>
-        </div>
-        </div>
+            <div class="col-md-4">
 
+                <div class="flip-card">
+                    <div class="flip-card-inner">
+                        <div class="flip-card-front">
+                            <img src="img_avatar.png" alt="Avatar" style="width:300px;height:300px;">
+                        </div>
+                        <div class="flip-card-back">
+                            <h1>Opskrift på XX</h1>
+                            <p>Ingredienser:</p>
 
-
-        <!------- Tekst om ting ----------->
-
-
-        <div class="container" id="Produktet">
-            <div class="row">
-                <div class="col-md-4">
-
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce quis lectus quis sem lacinia nonummy. Proin mollis lorem non dolor. In hac habitasse platea dictumst. Nulla ultrices odio. Donec augue. Phasellus dui. Maecenas facilisis nisl vitae nibh. Proin vel seo est vitae eros pretium dignissim. Aliquam aliquam sodales orci. Suspendisse potenti. Nunc adipiscing euismod arcu. Quisque facilisis mattis lacus. Fusce bibendum, velit in venenatis viverra, tellus ligula dignissim felis, quis euismod mauris tellus ut urna. Proin</p>
-                </div>
-                <div class="col-md-4">
-
-                    <p><var>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce quis lectus quis sem lacinia nonummy. Proin mollis lorem non dolor. In hac habitasse platea dictumst. Nulla ultrices odio. Donec augue. Phasellus dui. Maecenas facilisis nisl vitae nibh. Proin vel seo est vitae eros pretium dignissim. Aliquam aliquam sodales orci. Suspendisse potenti. Nunc adipiscing euismod arcu. Quisque facilisis mattis lacus. Fusce bibendum, velit in venenatis viverra, tellus ligula dignissim felis, quis euismod mauris tellus ut urna. Proin</var></p>
-                </div>
-                <div class="col-md-4">
-
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce quis lectus quis sem lacinia nonummy. Proin mollis lorem non dolor. In hac habitasse platea dictumst. Nulla ultrices odio. Donec augue. Phasellus dui. Maecenas facilisis nisl vitae nibh. Proin vel seo est vitae eros pretium dignissim. Aliquam aliquam sodales orci. Suspendisse potenti. Nunc adipiscing euismod arcu. Quisque facilisis mattis lacus. Fusce bibendum, velit in venenatis viverra, tellus ligula dignissim felis, quis euismod mauris tellus ut urna. Proin</p>
-                </div>
-            </div>
-        </div>
-
-
-        <!------- Citrus billeder ----------->
-
-        <div class="container-fluid">
-            <div class="row">
-                <div class="col-6 col-md-3"> <img src="grapefruit-100.jpg" class="img-fluid" alt=""></div>
-                <div class="col-6 col-md-3"><img src="lemon-100.jpg" class="img-fluid" alt=""></div>
-                <div class="col-6 col-md-3"><img src="lime-100.jpg" class="img-fluid" alt=""></div>
-                <div class="col-6 col-md-3"><img src="yellowgrape-100.jpg" class="img-fluid" alt=""></div>
-            </div>
-        </div>
-
-        <!------- Cocktail opskrift ----------->
-        <div class="baggrundsfarveopskrift ">
-            <div class="container" id="Opskrift">
-                <div class="row">
-                    <div class="col-12 col-md-6">
-                        <h4> Traditionel mumletekst</h4>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce quis lectus quis sem lacinia nonummy. Proin mollis lorem non dolor. In hac habitasse platea dictumst. Nulla ultrices odio. Donec augue. Phasellus dui. Maecenas facilisis nisl vitae nibh. Proin vel seo est vitae eros pretium dignissim. Aliquam aliquam sodales orci. Suspendisse potenti. Nunc adipiscing euismod arcu. Quisque facilisis mattis lacus. Fusce bibendum, velit in venenatis viverra, tellus ligula dignissim felis, quis euismod mauris tellus ut urna. Proin scelerisque. Nulla in mi. Integer ac leo. Nunc urna ligula, gravida a, pretium vitae, bibendum nec, ante. Aliquam ullamcorper iaculis lectus. Sed vel dui. Etiam lacinia risus vitae lacus. Aliquam elementum imperdiet turpis. In id metus. Mauris eu nisl. Nam pharetra nisi nec enim. Nulla aliquam, tellus sed laoreet blandit, eros urna vehicula lectus, et vulputate mauris arcu ut arcu. Praesent eros metus lirum larum, accumsan a, malesuada et, commodo vel, nulla. Aliquam sagittis auctor sapien. Morbi a nibh.
-
-
-
-                        </p>
+                            <p>Sådan gør du: </p>
+                        </div>
                     </div>
-                    <div class="col-12 col-md-6"><img src="mojitoopskrift.jpg" class="img-fluid" alt=""></div>
-
                 </div>
             </div>
-        </div>
-
-        <!------- Billeder fra moodboard ----------->
-
-        <div class="container-fluid">
-            <div class="row">
-                <div class="col-6 col-md-3"><img src="" class="img-fluid" alt=""></div>
-
-                <div class="col-6 col-md-3"><img src="" class="img-fluid" alt=""></div>
-
-                <div class="col-6 col-md-3"><img src="" class="img-fluid" alt=""></div>
-
-                <div class="col-6 col-md-3"><img src="" class="img-fluid" alt=""></div>
 
 
-                <div class="col-6 col-md-3"><img src="" class="img-fluid" alt=""></div>
+            <div class="col-md-4">
 
-                <div class="col-6 col-md-3"><img src="" class="img-fluid" alt=""></div>
+                <div class="flip-card">
+                    <div class="flip-card-inner">
+                        <div class="flip-card-front">
+                            <img src="" alt="pizza" style="width:300px;height:300px;">
+                        </div>
+                        <div class="flip-card-back">
+                            <h1>Opskrift på XX</h1>
+                            <h3>Ingredienser:</h3>
 
-                <div class="col-6 col-md-3"><img src="" class="img-fluid" alt=""></div>
-                <div class="col-6 col-md-3"><img src="" class="img-fluid" alt=""></div>
-            </div>
-        </div>
-
-
-        <!------- VIDEO ----------->
-
-        <div class="container-fluid" id="Video">
-            <div class="row">
-                <div class="col-md-6 offset-md-3"><video width="100%" height="auto" controls> <source src="" type="video/mp4" class="img-fluid"></video>
-
+                            <p>Sådan gør du: </p>
+                        </div>
+                    </div>
                 </div>
             </div>
+
+
+
         </div>
+    </div>
 
 
-        <!------- SOME billeder ----------->
-        <div class="baggrundssome">
 
-            <div class="container" id="some">
-                <div class="row" id="some">
-                    <div class="col-md-3 col-sm-6"><img src="ting1lil-100.jpg" class="img-fluid" alt=""></div>
-                    <div class="col-md-3 col-sm-6"><img src="ting2lil-100.jpg" class="img-fluid" alt=""></div>
-                    <div class="col-md-3 col-sm-6"><img src="ting3lil-100.jpg" class="img-fluid" alt=""></div>
-                    <div class="col-md-3 col-sm-6"><img src="ting4lil-100.jpg" class="img-fluid" alt=""></div>
+    <!------- Instagram feet samt links til SoMe ----------->
+    <script src="https://cdn.lightwidget.com/widgets/lightwidget.js"></script><iframe src="//lightwidget.com/widgets/f95ddfcac8df599fbd3dde4538daa76c.html" scrolling="no" allowtransparency="true" class="lightwidget-widget" style="width:100%;border:0;overflow:hidden;"></iframe>
 
 
-                </div>
-            </div>
-            <div class="container" id="some">
-                <div class="row" id="some">
-                    <div class="col-md-3 col-sm-6"><img src="1some.png" class="img-fluid" alt=""></div>
-                    <div class="col-md-3 col-sm-6"><img src="2some.png" class="img-fluid" alt=""></div>
-                    <div class="col-md-3 col-sm-6"><img src="3some.png" class="img-fluid" alt=""></div>
-                    <div class="col-md-3 col-sm-6"><img src="4some.png" class="img-fluid" alt=""></div>
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-6 col-md-3"><img src="" class="img-fluid" alt=""></div>
+
+            <div class="col-6 col-md-3"><img src="" class="img-fluid" alt=""></div>
+
+            <div class="col-6 col-md-3"><img src="" class="img-fluid" alt=""></div>
+
+            <div class="col-6 col-md-3"><img src="" class="img-fluid" alt=""></div>
 
 
-                </div>
+            <div class="col-6 col-md-3"><img src="" class="img-fluid" alt=""></div>
+
+            <div class="col-6 col-md-3"><img src="" class="img-fluid" alt=""></div>
+
+            <div class="col-6 col-md-3"><img src="" class="img-fluid" alt=""></div>
+            <div class="col-6 col-md-3"><img src="" class="img-fluid" alt=""></div>
+        </div>
+    </div>
+
+    <!------- Evt. footer ----------->
+
+
+    <!------- SOME billeder ----------->
+    <!--
+    <div class="baggrundssome">
+
+        <div class="container" id="some">
+            <div class="row" id="some">
+                <div class="col-md-3 col-sm-6"><img src="ting1lil-100.jpg" class="img-fluid" alt=""></div>
+                <div class="col-md-3 col-sm-6"><img src="ting2lil-100.jpg" class="img-fluid" alt=""></div>
+                <div class="col-md-3 col-sm-6"><img src="ting3lil-100.jpg" class="img-fluid" alt=""></div>
+                <div class="col-md-3 col-sm-6"><img src="ting4lil-100.jpg" class="img-fluid" alt=""></div>
+
+
             </div>
         </div>
+        <div class="container" id="some">
+            <div class="row" id="some">
+                <div class="col-md-3 col-sm-6"><img src="1some.png" class="img-fluid" alt=""></div>
+                <div class="col-md-3 col-sm-6"><img src="2some.png" class="img-fluid" alt=""></div>
+                <div class="col-md-3 col-sm-6"><img src="3some.png" class="img-fluid" alt=""></div>
+                <div class="col-md-3 col-sm-6"><img src="4some.png" class="img-fluid" alt=""></div>
+
+
+            </div>
+        </div>
+    </div>
+-->
 
 
 
-        <footer>
-        </footer>
+    <footer>
+    </footer>
 
 
-        <!-- Optional JavaScript -->
-        <!-- jQuery first, then Popper.js, then Bootstrap JS -->
-        <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
-        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
 
 
 
-        <script>
-            $('.nav-link').click(function() {
-                $('html, body').animate({
-                    scrollTop: $($(this).attr('href')).offset().top
-                }, 600);
-                return false;
-            });
-            $(window).on('scroll', function() {
-                var pixs = $(document).scrollTop()
-                pixs = pixs / 100;
-                $(".out").css({
-                    "-webkit-filter": "blur(" + pixs + "px)",
-                    "filter": "blur(" + pixs + "px)"
-                })
-            });
-        </script>
+    <script>
+        $('.nav-link').click(function() {
+            $('html, body').animate({
+                scrollTop: $($(this).attr('href')).offset().top
+            }, 600);
+            return false;
+        });
+        $(window).on('scroll', function() {
+            var pixs = $(document).scrollTop()
+            pixs = pixs / 100;
+            $(".out").css({
+                "-webkit-filter": "blur(" + pixs + "px)",
+                "filter": "blur(" + pixs + "px)"
+            })
+        });
+        $(window).scroll(function() {
+            if ($(window).scrollTop() > 100) {
+                $(".hero").addClass("blur");
+            } else {
+                $(".hero").removeClass("blur");
+            }
+        });
+        //video
+        var video = document.getElementById("myVideo");
+        var btn = document.getElementById("myBtn");
+
+        function myFunction() {
+            if (video.paused) {
+                video.play();
+                btn.innerHTML = "Pause";
+            } else {
+                video.pause();
+                btn.innerHTML = "Play";
+            }
+        }
+    </script>
+
 </body>
+
+
 
 </html>
