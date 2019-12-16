@@ -14,9 +14,8 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <style>
         .fa {
-            padding: 20px;
-            font-size: 30px;
-            width: 50px;
+
+            width: 60px;
             text-align: center;
             text-decoration: none;
             border-radius: 50%;
@@ -35,6 +34,7 @@
         .fa-facebook {
             background: #FAB42A;
             color: white;
+
         }
 
         /*Instagram */
@@ -43,15 +43,23 @@
 
             background: #FAB42A;
             color: white;
+
+
         }
 
 
 
         @font-face {
             font-family: 'Bitstream';
+
             src: url('fonte/Bitstream - FuturaBT Bold.otf');
+
             src: url('Bitstream - FuturaBT Medium.otf');
+
             src: url('Cyclone Background.otf');
+
+            src: url('Bitstream - FuturaBT Condensed Medium.otf');
+
         }
 
         @font-face {
@@ -59,6 +67,17 @@
             src: url('fonte/Bitstream - FuturaBT Bold.otf');
 
         }
+
+        @font-face {
+            font-family: 'Bitstream';
+            src: url('Bitstream - FuturaBT Medium.otf');
+
+        }
+
+
+
+
+
 
         h1 {
             font-family: 'Cyclone';
@@ -66,17 +85,32 @@
             color: #FAB42A;
         }
 
-
         h2 {
             font-family: 'Cyclone';
             font-size: 4em;
+        }
+
+        h3 {
+            font-family: 'Bitstream';
+            font-size: 3em;
+
+
+
+        }
+
+        h5 {
+            font-family: 'bitstream';
+            font-size: 1.5em;
+            line-height: 1.5em;
+
+
         }
 
 
 
         body {
 
-            font-family: bitstream;
+            font-family: 'bitstream';
             font-size: 12px;
             padding-bottom: 50px;
 
@@ -104,7 +138,12 @@
             text-align: center;
             padding: 14px 16px;
             text-decoration: none;
-            font-size: 17px;
+            font-size: 2.8em;
+
+        }
+
+        a {
+            font-family: 'Cyclone';
         }
 
         .navbar a:hover {
@@ -209,6 +248,21 @@
         #forhandlere {
             padding-top: 50px;
             padding-bottom: 80px;
+        }
+
+        footer {
+
+            background-color: #4E61AA;
+            padding: 6px;
+
+            position: fixed;
+            left: 0;
+            bottom: 0;
+            width: 100%;
+            font-size: 13px;
+            color: white;
+            text-align: center;
+        }
 
     </style>
 
@@ -217,17 +271,33 @@
 </head>
 
 <body>
+    <!--
 
-
+    <body>
+        <div class="navigation-bar">
+            <div id="navigation-container">
+                <img src="logo.png">
+                <ul>
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#">Projects</a></li>
+                    <li><a href="#">About</a></li>
+                    <li><a href="#">Services</a></li>
+                    <li><a href="#">Get in Touch</a></li>
+                </ul>
+            </div>
+        </div>
+    </body>
+-->
 
     <!------- navigations menu - fixed menu ----------->
     <div class="navbar">
+        <img src="img/logo.png" style="width: 80px;">
         <a href="#Fun">Fun facts</a>
         <a href="#info">Info om Special Effects</a>
         <a href="#Opskrift">Opskrift</a>
         <a href="#forhandlere">Forhandlere</a>
-        <a href="https://www.facebook.com/marie.moldow" class="fa fa-facebook"></a>
-        <a href="https://www.instagram.com/" class="fa fa-instagram"></a>
+        <a href="https://www.facebook.com/Bb_special_effects-108514407310694/?modal=admin_todo_tour" class="fa fa-facebook"></a>
+        <a href="https://www.instagram.com/bb_special_effects/" class="fa fa-instagram"></a>
     </div>
 
     <!------- navigations menu SLUT ----------->
@@ -239,33 +309,6 @@
 
     </div>
     <br><br><br>
-    <!------- Fun facts omkring Brooklyn Brewery ----------->
-    <h1 style="text-align: center" id="Fun"> Fun facts omkring Brooklyn Brewery</h1>
-
-    <div class="container" id="funfacts">
-        <div class="row">
-            <div class="col-md-4">
-
-                <h3><i>Elsker etiketter</i></h3>
-                <h5><br> Alle Brooklyns farverige labels er ikoniske, dette er ingen tilfældighed da de er blevet designet af Milton Glaser. Han er skaberen af det ikoniske "I HEART New York". Det krævede ét opkald om dagen i 14 dage, før Milton Galser sagde ja til et møde.</h5><br>
-            </div>
-            <div class="col-md-4">
-                <h3><i>Støtter LGBTQ rettigheder</i></h3>
-                <br>
-                <h5> Hvert år lancere Brooklyn Brewery en Stonewall IPA, som bliver produceret i et samarbejde med non-profit organisationen Greenwich Villige-bar.</h5>
-
-            </div>
-            <br>
-            <div class="col-md-4">
-                <h3><i> Brooklyn Brewery har en søster i Sverige</i></h3>
-                <br>
-                <h5>I 2014 lancerede de i partnerskab med Carlsberg et søsterbryggeri i Stockholm som hedder "New Carnegie Brewery" som er det første europæiske håndværksbryggeri drevet af et amerikansk firma.</h5>
-
-
-            </div>
-        </div>
-    </div>
-
 
     <!-------info om øllen ----------->
     <div class="container" id="info">
@@ -305,10 +348,14 @@
                             <img src="img/omelet.jpg" alt="hjemmelavet omelet" style="width:300px;height:300px;">
                         </div>
                         <div class="flip-card-back">
-                            <h2>Opskrift på pizzadej</h2>
-                            <p>Ingredienser:</p>
+                            <h2>Opskrift på Omelet</h2>
+                            <p>Ingredienser:3 Æg, Mælk, salt og peber, ricotta ost, chorizo, avocado, rugbrød, radiser, tomater, frisk gedeost
 
-                            <p>Sådan gør du: </p>
+                            </p>
+
+                            <p>Sådan gør du: Æg, mælk og ricotta blandes sammen og omeletten laves på en pande. Chorizo pølse skæres i små stykker og steges på en pande. Avocado moses med en gaffel og smøres på det ristede rugbrød, hvor radiser og tomater skæres ud og pyntes på. Chorizo og gedeost feta drysses oven på omelet og rugbrødsmad.
+                            </p>
+
                         </div>
                     </div>
                 </div>
@@ -321,10 +368,12 @@
                             <img src="img/pizza.jpg" alt="hjemmelavet pizza" style="width:300px;height:300px;">
                         </div>
                         <div class="flip-card-back">
-                            <h2>Opskrift på XX</h2>
-                            <p>Ingredienser:</p>
+                            <h2>Opskrift på pizzadej</h2>
+                            <p>Ingredienser: ¼ liter koldt vand, 20g gær, 1 tsk sukker, 300g tipomel ”00”, 125g semolamel, 1tsk salt, 1spsk olivenolie</p>
 
-                            <p>Sådan gør du: </p>
+
+                            <p>Sådan gør du: Bland vand, gær og sukker sammen. Tilsæt herefter 150 g tipo 00-mel og 125 g semola. Det hele æltes. Tilsæt salt og olie, rør videre og tilsæt derefter resten af melet over to omgange. Ælt dejen grundigt i 10 min. Pizzaen pyntes og bages i ovnen på 200 grader i 10 minutter. Tip: bag pizzaen på en pizzasten for ekstra sprød skorpe.
+                            </p>
                         </div>
                     </div>
                 </div>
@@ -339,22 +388,54 @@
                             <img src="img/salat.jpg" alt="hjemmelavet salat" style="width:300px;height:300px;">
                         </div>
                         <div class="flip-card-back">
-                            <h2>Opskrift på XX</h2>
-                            <h3>Ingredienser:</h3>
 
-                            <p>Sådan gør du: </p>
+                            <h2>Opskrift på salat</h2>
+                            <p>Ingredienser:Grønkål, Rød peberfrugt, Biogan Black Eye Bønner, Granatæblekerner, Belugalinser, Gedeost Feta, en kvart butternut squash
+                            </p>
+
+                            <p>Sådan gør du: Grønkål og peberfrugt snittes fint og blandes sammen med granatæblekerner. Belugalinser og Biogan black eye bønner koges, som anvist på pakken. Det hele blandes sammen og gedeost feta smuldres. Butternut squash tilberedes i ovnen på 200 grader i 15 min.
+                            </p>
                         </div>
                     </div>
                 </div>
             </div>
             <br> <br> <br>
+            <br> <br> <br>
+            <!------- Fun facts omkring Brooklyn Brewery ----------->
+            <h1 style="text-align: center; padding-top: 40px;" id="Fun"> Fun facts omkring Brooklyn Brewery</h1>
+
+            <div class="container" id="funfacts">
+                <div class="row">
+                    <div class="col-md-4">
+
+                        <h3 style="text-align: center;">Elsker etiketter</h3>
+                        <h5 style="text-align: center;"><br> Alle Brooklyns farverige labels er ikoniske, dette er ingen tilfældighed da de er blevet designet af Milton Glaser. Han er skaberen af det ikoniske "I HEART New York". Det krævede ét opkald om dagen i 14 dage, før Milton Galser sagde ja til et møde.</h5><br>
+                    </div>
+                    <div class="col-md-4">
+                        <h3 style="text-align: center;">Støtter LGBTQ </h3>
+                        <br>
+                        <h5 style="text-align: center;"> Hvert år lancere Brooklyn Brewery en Stonewall IPA, som bliver produceret i et samarbejde med non-profit organisationen Greenwich Villige-bar.</h5>
+
+                    </div>
+                    <br>
+                    <div class="col-md-4">
+                        <h3 style="text-align: center;"> Søster i Sverige</h3>
+                        <br>
+                        <h5 style="text-align: center;">I 2014 lancerede de i partnerskab med Carlsberg et søsterbryggeri i Stockholm som hedder "New Carnegie Brewery" som er det første europæiske håndværksbryggeri drevet af et amerikansk firma.</h5>
+
+
+                    </div>
+                </div>
+            </div>
+
+
             <!------- Find forhandlere ----------->
 
             <div class="container" id="forhandlere">
                 <div class="row">
                     <div class="col-md-4" style="text-align: center">
                         <br> <br> <br><br>
-                        <h2> Køb online</h2>
+                        <h3> Køb online</h3>
 
                         <a href="https://butik.mad.coop.dk//drikkevarer/oel-og-cider/udenlandske-specialoel/brooklyn-defender-p-5707643112552"><img src="img/shop_online@72x.png" style="width: 100%" "height: auto" class="img-fluid" alt="køb special effects online"></a>
                         <br>
@@ -363,14 +444,14 @@
 
                     <div class="col-md-4" style="text-align: center">
                         <br> <br> <br><br>
-                        <h2> Besøg Brooklyn bar</h2>
+                        <h3> Besøg Brooklyn bar</h3><br><br>
                         <a href="https://streckers.dk/brooklyn-bar/">
                         <img src="img/BrooklynBar.png" style="width: 100%" "height: auto" class="img-fluid" alt="Brooklyn Brewery logo"></a>
                     </div>
                     <br>
                     <div class="col-md-4" style="text-align: center">
                         <br> <br> <br><br>
-                        <h2> Køb i butik</h2>
+                        <h3> Køb i butik</h3>
                         <a href="https://meny.dk/find-butik?fbclid=IwAR1_GZ73vchtuA7MdP-48xp4yOLXBOT-jKmeAFemaofufhrWuoH0vXie0ok"><img src="img/shop_instore@72x.png"style="width: 100%" "height: auto" class="img-fluid" alt="køb special effects i butik">
                         <br></a>
 
@@ -410,6 +491,8 @@
 
 
     <footer>
+
+        <p>Kontakt information:<br> Email: info@brooklynbrewery.com <br> Tlf: 25254949</p>
     </footer>
 
 
