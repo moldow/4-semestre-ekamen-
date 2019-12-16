@@ -62,10 +62,15 @@
 
         h1 {
             font-family: 'Cyclone';
-            font-size: 4em;
+            font-size: 10em;
+            color: #FAB42A;
         }
 
 
+        h2 {
+            font-family: 'Cyclone';
+            font-size: 4em;
+        }
 
 
 
@@ -73,7 +78,7 @@
 
             font-family: bitstream;
             font-size: 12px;
-            margin: 0;
+            padding-bottom: 50px;
 
         }
 
@@ -178,15 +183,32 @@
             display: none;
         }
 
-        .button {
-            background-color: #4E61AA;
-            color: white;
-            padding: 15px 32px;
-            text-align: center;
-            text-decoration: none;
-            display: inline-block;
-            font-size: 16px;
+        .opskriftbillede {
+            position: relative;
+            height: auto;
+            width: 100%;
+
         }
+
+
+        #funfacts {
+            padding-top: 50px;
+            padding-bottom: 80px;
+        }
+
+        #info {
+            padding-top: 50px;
+            padding-bottom: 80px;
+        }
+
+        #Opskrift {
+            padding-top: 50px;
+            padding-bottom: 80px;
+        }
+
+        #forhandlere {
+            padding-top: 50px;
+            padding-bottom: 80px;
 
     </style>
 
@@ -196,14 +218,14 @@
 
 <body>
 
-    <a href="#" class="fa fa-facebook"></a>
-    <a href="#" class="fa fa-instagram"></a>
+
 
     <!------- navigations menu - fixed menu ----------->
     <div class="navbar">
-        <a href="#home">Home</a>
-        <a href="#news">News</a>
-        <a href="#contact">Contact</a>
+        <a href="#Fun">Fun facts</a>
+        <a href="#info">Info om Special Effects</a>
+        <a href="#Opskrift">Opskrift</a>
+        <a href="#forhandlere">Forhandlere</a>
         <a href="https://www.facebook.com/marie.moldow" class="fa fa-facebook"></a>
         <a href="https://www.instagram.com/" class="fa fa-instagram"></a>
     </div>
@@ -216,78 +238,57 @@
         <video src="img/rain.mp4" autoplay muted loop></video>
 
     </div>
+    <br><br><br>
+    <!------- Fun facts omkring Brooklyn Brewery ----------->
+    <h1 style="text-align: center" id="Fun"> Fun facts omkring Brooklyn Brewery</h1>
 
-    <!------- Skriv om Brooklyn Brewery ----------->
-
-    <div class=".container-fluid " id="infor">
+    <div class="container" id="funfacts">
         <div class="row">
-            <div class="col-sm">
+            <div class="col-md-4">
 
-            </div>
-            <div class="col-sm">
-                <h1> Fun facts omkring Brooklyn Brewery</h1>
-            </div>
-            <div class="col-sm">
-
-            </div>
-        </div>
-    </div>
-
-
-
-    <div class=".container-fluid " id="infor">
-        <div class="row">
-            <div class="col-sm">
-
-            </div>
-            <div class="col-sm">
                 <h3><i>Elsker etiketter</i></h3>
-                <h5>
-                    Alle Brooklyns farverige labels er ikoniske, dette er ingen tilfældighed da de er blevet designet af Milton Glaser. Han er skaberen af det ikoniske "I HEART New York". Det krævede ét opkald om dagen i 14 dage, før Milton Galser sagde ja til et møde.</h5>
+                <h5><br> Alle Brooklyns farverige labels er ikoniske, dette er ingen tilfældighed da de er blevet designet af Milton Glaser. Han er skaberen af det ikoniske "I HEART New York". Det krævede ét opkald om dagen i 14 dage, før Milton Galser sagde ja til et møde.</h5><br>
+            </div>
+            <div class="col-md-4">
                 <h3><i>Støtter LGBTQ rettigheder</i></h3>
+                <br>
                 <h5> Hvert år lancere Brooklyn Brewery en Stonewall IPA, som bliver produceret i et samarbejde med non-profit organisationen Greenwich Villige-bar.</h5>
-                <h3><i>Har en søster i Sverige</i></h3>
-                <h5> Brooklyn Brewery har en søster i Sverige. i 2014 lancerede de i partnerskab med Carlsberg et søsterbryggeri i Stockholm som hedder "New Carnegie Brewery" som er det første europæiske håndværksbryggeri drevet af et amerikansk firma.</h5>
-
 
             </div>
-            <div class="col-sm">
+            <br>
+            <div class="col-md-4">
+                <h3><i> Brooklyn Brewery har en søster i Sverige</i></h3>
+                <br>
+                <h5>I 2014 lancerede de i partnerskab med Carlsberg et søsterbryggeri i Stockholm som hedder "New Carnegie Brewery" som er det første europæiske håndværksbryggeri drevet af et amerikansk firma.</h5>
+
 
             </div>
         </div>
     </div>
-    <br>
+
 
     <!-------info om øllen ----------->
-
-
-    <div class="container" id="Produktet">
+    <div class="container" id="info">
         <div class="row">
             <div class="col-md-4">
-                <br>
-                <p>Alkohol: 0,4% Server den ved 5 grader </p>
+
+                <img src="img/smag@72x.png" style="width: 100%" alt="brooklyn beer samg">
+
             </div>
+
+            <div class="col-md-4" style="text-align: center">
+                <img src="img/brooklyn_back.png" alt="brooklyn beer samg">
+
+            </div>
+
             <div class="col-md-4">
 
-                <img class="special-effects" src="img/brooklyn-special-effects.jpg"> </div>
-            <div class="col-md-4">
-                <br>
-                <p>Special effects er en smagsfuld lager øl med skrællet grapefrugt og friske aromaer som giver øllen en ren bitter kant. Øllen er til mænd og kvinder og kan drikkes året rundt. Øllen er god sammen med: spinatsalater, grillet kylling, BLT-sandwich, toast, hotwings, æggekage/omelet og friske gedeost. Enjoy!</p>
+                <img src="img/madkombi@72x.png" style="width: 100%" alt="brooklyn beer samg">
             </div>
+
+
         </div>
     </div>
-    <!------- drop down - mere info ----------->
-
-    <a href="#" class="button">Link Button</a>
-
-    <button class="button">Button</button>
-
-    <input type="button" class="button" value="Input Button">
-
-
-
-    <!------- how to - video ----------->
-
 
 
     <!------- Opskrifter - flipcards ----------->
@@ -301,10 +302,10 @@
                 <div class="flip-card">
                     <div class="flip-card-inner">
                         <div class="flip-card-front">
-                            <img src="img_avatar.png" alt="Avatar" style="width:300px;height:300px;">
+                            <img src="img/omelet.jpg" alt="hjemmelavet omelet" style="width:300px;height:300px;">
                         </div>
                         <div class="flip-card-back">
-                            <h1>Opskrift på pizzadej</h1>
+                            <h2>Opskrift på pizzadej</h2>
                             <p>Ingredienser:</p>
 
                             <p>Sådan gør du: </p>
@@ -317,10 +318,10 @@
                 <div class="flip-card">
                     <div class="flip-card-inner">
                         <div class="flip-card-front">
-                            <img src="img_avatar.png" alt="Avatar" style="width:300px;height:300px;">
+                            <img src="img/pizza.jpg" alt="hjemmelavet pizza" style="width:300px;height:300px;">
                         </div>
                         <div class="flip-card-back">
-                            <h1>Opskrift på XX</h1>
+                            <h2>Opskrift på XX</h2>
                             <p>Ingredienser:</p>
 
                             <p>Sådan gør du: </p>
@@ -335,10 +336,10 @@
                 <div class="flip-card">
                     <div class="flip-card-inner">
                         <div class="flip-card-front">
-                            <img src="" alt="pizza" style="width:300px;height:300px;">
+                            <img src="img/salat.jpg" alt="hjemmelavet salat" style="width:300px;height:300px;">
                         </div>
                         <div class="flip-card-back">
-                            <h1>Opskrift på XX</h1>
+                            <h2>Opskrift på XX</h2>
                             <h3>Ingredienser:</h3>
 
                             <p>Sådan gør du: </p>
@@ -346,15 +347,44 @@
                     </div>
                 </div>
             </div>
+            <br> <br> <br>
+            <!------- Find forhandlere ----------->
 
+            <div class="container" id="forhandlere">
+                <div class="row">
+                    <div class="col-md-4" style="text-align: center">
+                        <br> <br> <br><br>
+                        <h2> Køb online</h2>
+
+                        <a href="https://butik.mad.coop.dk//drikkevarer/oel-og-cider/udenlandske-specialoel/brooklyn-defender-p-5707643112552"><img src="img/shop_online@72x.png" style="width: 100%" "height: auto" class="img-fluid" alt="køb special effects online"></a>
+                        <br>
+                    </div>
+
+
+                    <div class="col-md-4" style="text-align: center">
+                        <br> <br> <br><br>
+                        <h2> Besøg Brooklyn bar</h2>
+                        <a href="https://streckers.dk/brooklyn-bar/">
+                        <img src="img/BrooklynBar.png" style="width: 100%" "height: auto" class="img-fluid" alt="Brooklyn Brewery logo"></a>
+                    </div>
+                    <br>
+                    <div class="col-md-4" style="text-align: center">
+                        <br> <br> <br><br>
+                        <h2> Køb i butik</h2>
+                        <a href="https://meny.dk/find-butik?fbclid=IwAR1_GZ73vchtuA7MdP-48xp4yOLXBOT-jKmeAFemaofufhrWuoH0vXie0ok"><img src="img/shop_instore@72x.png"style="width: 100%" "height: auto" class="img-fluid" alt="køb special effects i butik">
+                        <br></a>
+
+                    </div>
+                </div>
+            </div>
 
 
         </div>
     </div>
-
-
-
     <!------- Instagram feet samt links til SoMe ----------->
+    <h1 style="text-align: center"> Følg med på instagram</h1>
+
+
     <script src="https://cdn.lightwidget.com/widgets/lightwidget.js"></script><iframe src="//lightwidget.com/widgets/f95ddfcac8df599fbd3dde4538daa76c.html" scrolling="no" allowtransparency="true" class="lightwidget-widget" style="width:100%;border:0;overflow:hidden;"></iframe>
 
 
@@ -377,37 +407,6 @@
             <div class="col-6 col-md-3"><img src="" class="img-fluid" alt=""></div>
         </div>
     </div>
-
-    <!------- Evt. footer ----------->
-
-
-    <!------- SOME billeder ----------->
-    <!--
-    <div class="baggrundssome">
-
-        <div class="container" id="some">
-            <div class="row" id="some">
-                <div class="col-md-3 col-sm-6"><img src="ting1lil-100.jpg" class="img-fluid" alt=""></div>
-                <div class="col-md-3 col-sm-6"><img src="ting2lil-100.jpg" class="img-fluid" alt=""></div>
-                <div class="col-md-3 col-sm-6"><img src="ting3lil-100.jpg" class="img-fluid" alt=""></div>
-                <div class="col-md-3 col-sm-6"><img src="ting4lil-100.jpg" class="img-fluid" alt=""></div>
-
-
-            </div>
-        </div>
-        <div class="container" id="some">
-            <div class="row" id="some">
-                <div class="col-md-3 col-sm-6"><img src="1some.png" class="img-fluid" alt=""></div>
-                <div class="col-md-3 col-sm-6"><img src="2some.png" class="img-fluid" alt=""></div>
-                <div class="col-md-3 col-sm-6"><img src="3some.png" class="img-fluid" alt=""></div>
-                <div class="col-md-3 col-sm-6"><img src="4some.png" class="img-fluid" alt=""></div>
-
-
-            </div>
-        </div>
-    </div>
--->
-
 
 
     <footer>
