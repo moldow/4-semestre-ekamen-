@@ -10,7 +10,7 @@
 
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <style>
         .fa {
@@ -152,6 +152,56 @@
         }
 
 
+
+
+        .navbar a:hover {
+            background-color: #ddd;
+            color: black;
+        }
+
+        .navbar a.active {
+            background-color: #4CAF50;
+            color: white;
+        }
+
+        .navbar .icon {
+            display: none;
+        }
+
+        @media screen and (max-width: 800px) {
+            .navbar a:not(:first-child) {
+                display: none;
+            }
+            .navbar a.icon {
+                float: right;
+                display: block;
+            }
+        }
+
+        @media screen and (max-width: 800px) {
+            .navbar.responsive {
+                position: relative;
+            }
+            .navbar.responsive .icon {
+                position: absolute;
+                right: 0;
+                top: 0;
+            }
+            .navbar.responsive a {
+                float: none;
+                display: block;
+                text-align: left;
+            }
+        }
+
+        .topnav.responsive a {
+            float: none;
+            display: block;
+            text-align: left;
+        }
+
+        }
+
         /*        flipcards*/
 
         .flip-card {
@@ -290,7 +340,7 @@
 -->
 
     <!------- navigations menu - fixed menu ----------->
-    <div class="navbar">
+    <div class="navbar" id="myNavbar">
         <img src="img/logo.png" style="width: 80px;">
         <a href="#Fun">Fun facts</a>
         <a href="#info">Info om Special Effects</a>
@@ -298,7 +348,42 @@
         <a href="#forhandlere">Forhandlere</a>
         <a href="https://www.facebook.com/Bb_special_effects-108514407310694/?modal=admin_todo_tour" class="fa fa-facebook"></a>
         <a href="https://www.instagram.com/bb_special_effects/" class="fa fa-instagram"></a>
+        <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+            <i class="fa fa-bars"></i>
+
+  </a>
+
     </div>
+    <!------- navigations menu - mobil burger-menu ----------->
+    <!-- Simulate a smartphone / tablet -->
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+
+    <!--<div class="mobile-container">
+
+    Top Navigation Menu
+    <div class="topnav">
+        <a href="#home" class="active">Logo</a>
+        <div id="myLinks">
+            <a href="#news">News</a>
+            <a href="#contact">Contact</a>
+            <a href="#about">About</a>
+        </div>
+        <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+    <i class="fa fa-bars"></i>
+  </a>
+    </div>
+
+    <div style="padding-left:16px">
+        <h3>Vertical Mobile Navbar</h3>
+        <p>This example demonstrates how a navigation menu on a mobile/smart phone could look like.</p>
+        <p>Click on the hamburger menu (three bars) in the top right corner, to toggle the menu.</p>
+    </div>-->
+
+    <!-- End smartphone / tablet look -->
 
     <!------- navigations menu SLUT ----------->
 
@@ -537,6 +622,24 @@
             } else {
                 video.pause();
                 btn.innerHTML = "Play";
+            }
+        }
+        /* Toggle between showing and hiding the navigation menu links when the user clicks on the hamburger menu / bar icon */
+        function myFunction() {
+            var x = document.getElementById("myLinks");
+            if (x.style.display === "block") {
+                x.style.display = "none";
+            } else {
+                x.style.display = "block";
+            }
+        }
+
+        function myFunction() {
+            var x = document.getElementById("myNavbar");
+            if (x.className === "navbar") {
+                x.className += "responsive";
+            } else {
+                x.className = "navbar";
             }
         }
 
