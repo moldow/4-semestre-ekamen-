@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="en">
+<html lang="da">
 
 
 <head>
@@ -86,7 +86,9 @@
             font-size: 4em;
         }
 
-
+        h5 {
+            line-height: 1.7em;
+        }
 
         body {
 
@@ -197,8 +199,6 @@
         }
 
 
-
-
         .overlay {
             position: absolute;
             background-color: rgba(0, 0, 0, 0.71);
@@ -252,7 +252,12 @@
             text-align: center;
         }
 
-
+.lightwidget-widget
+        {
+            width:100%;
+            border:0;
+            overflow:hidden;
+        }
 
         /* Smartphones (portrait and landscape) ----------- */
 
@@ -302,19 +307,14 @@
 
             body {
                 font-size: 10px;
-            }
-
-    </style>
+            }</style>
 
 
     <title>Alkoholfri øl</title>
 </head>
 
 <body>
-
-
-
-    <!------- navigations menu - fixed menu ----------->
+ <!------- navigations menu - fixed menu ----------->
     <div class="topnav" id="myTopnav">
         <a href="#video">
            <img src="img/logo.png" alt="brooklyn_brewery" style="width: 80px;">
@@ -331,11 +331,8 @@
     <i class="fa fa-bars"></i>
   </a>
     </div>
-
-
     <br><br>
     <br><br>
-
     <br><br>
     <br><br>
     <!------- navigations menu SLUT ----------->
@@ -344,7 +341,6 @@
     <div class="video-container" id="video">
         <div class="overlay"></div>
         <video src="img/full-video.mp4" autoplay muted loop></video>
-
     </div>
 
     <br><br><br>
@@ -354,7 +350,7 @@
             <div class="col-md-4">
   <!--video1-->
 
-         <video id="video" width="320" height="176" controls>
+         <video id="video1" width="320" height="176" controls>
   <source src="img/pico.mp4" type="video/mp4">
 
 </video>
@@ -364,7 +360,7 @@
             <div class="col-md-4" style="text-align: center">
 
 
-<video id="video" width="320" height="176" controls>
+<video id="video2" width="320" height="176" controls>
   <source src="img/danset%C3%B8ser02.mp4" type="video/mp4">
 
 </video>
@@ -373,7 +369,7 @@
 
             <div class="col-md-4">
 
-          <video id="video" width="320" height="176" controls>
+          <video id="video3" width="320" height="176" controls>
   <source src="img/SoMe_2.mp4" type="video/mp4">
 
 </video>
@@ -412,7 +408,7 @@
 
 
     <div class="container" id="Opskrift">
-        <h1 style="text-align: center" id="Fun"> OPSKRIFTER</h1>
+        <h1 style="text-align: center"> OPSKRIFTER</h1>
         <p style="text-align: center" id="mad"> Vi har lavet nogle lækre opskrifter på mad, som din øl går godt til. Flip kortet og se, hvordan du gør. Bon apétit.</p>
 
         <div class="row">
@@ -505,7 +501,7 @@
                         <br> <br> <br><br>
                         <h2> Køb online</h2>
 
-                        <a href="https://butik.mad.coop.dk//drikkevarer/oel-og-cider/udenlandske-specialoel/brooklyn-defender-p-5707643112552"><img src="img/shop_online@72x.png" style="width: 100%" "height: auto" class="img-fluid" alt="køb special effects online"></a>
+                        <a href="https://butik.mad.coop.dk//drikkevarer/oel-og-cider/udenlandske-specialoel/brooklyn-defender-p-5707643112552"><img src="img/shop_online@72x.png" style="width: 100%" alt="køb special effects online"></a>
                         <br>
                     </div>
 
@@ -515,13 +511,13 @@
                         <br> <br> <br><br>
                         <h2> Besøg Brooklyn bar</h2>
                         <a href="https://streckers.dk/brooklyn-bar/">
-                        <img src="img/BrooklynBar.png" style="width: 100%" "height: auto" class="img-fluid" alt="Brooklyn Brewery_bar"></a>
+                        <img src="img/BrooklynBar.png" style="width: 100%" alt="Brooklyn Brewery_bar"></a>
                     </div>
                     <br>
                     <div class="col-md-4" style="text-align: center">
                         <br> <br> <br><br>
                         <h2> Køb i butik</h2>
-                        <a href="https://meny.dk/find-butik?fbclid=IwAR1_GZ73vchtuA7MdP-48xp4yOLXBOT-jKmeAFemaofufhrWuoH0vXie0ok"><img src="img/shop_instore@72x.png"style="width: 100%" "height: auto" class="img-fluid" alt="køb special effects i butik">
+                        <a href="https://meny.dk/find-butik?fbclid=IwAR1_GZ73vchtuA7MdP-48xp4yOLXBOT-jKmeAFemaofufhrWuoH0vXie0ok"><img src="img/shop_instore@72x.png" style="width:100%" alt="køb special effects i butik">
                         <br></a>
 
                     </div>
@@ -550,7 +546,7 @@
             </div>
             <br>
             <div class="col-md-4">
-                <h3 style="text-align: center">Brooklyn Brewery har en søster i Sverige</h3>
+                <h3 style="text-align: center">Søster i Sverige</h3>
                 <br>
                 <h5 style="text-align: center">I 2014 lancerede de i partnerskab med Carlsberg et søsterbryggeri i Stockholm som hedder "New Carnegie Brewery" som er det første europæiske håndværksbryggeri drevet af et amerikansk firma.</h5>
 
@@ -568,7 +564,7 @@
     <h1 style="text-align: center"> FØLG MED PÅ INSTAGRAM</h1>
 
     <!-- LightWidget WIDGET -->
-    <script src="https://cdn.lightwidget.com/widgets/lightwidget.js"></script><iframe src="//lightwidget.com/widgets/2e943207d95e5f02b587f4ef2fda1209.html" scrolling="no" allowtransparency="true" class="lightwidget-widget" style="width:100%;border:0;overflow:hidden;"></iframe>
+    <script src="https://cdn.lightwidget.com/widgets/lightwidget.js"></script><iframe src="//lightwidget.com/widgets/2e943207d95e5f02b587f4ef2fda1209.html" scrolling="no" allowtransparency="true" class="lightwidget-widget"></iframe>
 
 
 
