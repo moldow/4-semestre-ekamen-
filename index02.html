@@ -344,12 +344,44 @@
     <div class="video-container" id="video">
         <div class="overlay"></div>
         <video src="img/full-video.mp4" autoplay muted loop></video>
-<button onclick="playVid()" type="button">Play Video</button>
-<button onclick="pauseVid()" type="button">Pause Video</button><br>
+
     </div>
 
     <br><br><br>
+  <!--små videoer-->
+    <div class="container" id="info">
+        <div class="row">
+            <div class="col-md-4">
+  <!--video1-->
 
+         <video id="video" width="320" height="176" controls>
+  <source src="img/pico.mp4" type="video/mp4">
+
+</video>
+            </div>
+  <!--video2-->
+
+            <div class="col-md-4" style="text-align: center">
+
+
+<video id="video" width="320" height="176" controls>
+  <source src="img/danset%C3%B8ser02.mp4" type="video/mp4">
+
+</video>
+            </div>
+  <!--video3-->
+
+            <div class="col-md-4">
+
+          <video id="video" width="320" height="176" controls>
+  <source src="img/SoMe_2.mp4" type="video/mp4">
+
+</video>
+            </div>
+
+
+        </div>
+    </div>
 
 
     <!-------info om øllen ----------->
@@ -578,15 +610,13 @@
                 btn.innerHTML = "Play";
             }
         }
-var vid = document.getElementById("video");
 
-function playVid() {
-  vid.play();
-}
 
-function pauseVid() {
-  vid.pause();
-}
+
+
+
+
+
         //burgermenu
         function myFunction() {
             var x = document.getElementById("myTopnav");
