@@ -4,6 +4,20 @@
 
 <head>
 
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-154775301-1"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+
+        function gtag() {
+            dataLayer.push(arguments);
+        }
+        gtag('js', new Date());
+
+        gtag('config', 'UA-154775301-1');
+
+    </script>
+
     <!-- Required meta tags -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
@@ -269,30 +283,25 @@
         @media only screen and (max-width: 800px) {
             h1 {
                 font-size: 4.5em;
-
             }
             h2 {
                 font-size: 4em;
-
             }
 
             h3 {
                 font-size: 3em;
-
             }
             h5 {
                 font-size: 2em;
-
             }
             footer {
                 font-size: 0.8em;
-
             }
 
             body {
                 font-size: 10px;
-
             }
+
     </style>
 
 
@@ -313,8 +322,9 @@
         <a href="#forhandlere">Forhandlere</a>
         <a href="#Fun">Fun facts</a>
         <a href="https://www.facebook.com/Bb_special_effects-108514407310694/?modal=admin_todo_tour" class="fa fa-facebook"></a>
-
         <a href="https://www.instagram.com/bb_special_effects/" class="fa fa-instagram"></a>
+        <!------- Burger navigations menu ----------->
+
         <a href="javascript:void(0);" class="icon" onclick="myFunction()">
     <i class="fa fa-bars"></i>
   </a>
@@ -558,15 +568,7 @@
             }
         }
 
-        function myFunction() {
-            var x = document.getElementById("myNavbar");
-            if (x.className === "navbar") {
-                x.className += "responsive";
-            } else {
-                x.className = "navbar";
-            }
-        }
-
+        //burgermenu
         function myFunction() {
             var x = document.getElementById("myTopnav");
             if (x.className === "topnav") {
@@ -575,6 +577,7 @@
                 x.className = "topnav";
             }
         }
+
     </script>
 
 </body>
