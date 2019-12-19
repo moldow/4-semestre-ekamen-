@@ -342,8 +342,10 @@
     <div class="video-container" id="video">
         <div class="overlay"></div>
         <video src="img/full-video.mp4" autoplay muted loop></video>
-
+<button onclick="playVid()" type="button">Play Video</button>
+<button onclick="pauseVid()" type="button">Pause Video</button><br>
     </div>
+
     <br><br><br>
 
 
@@ -555,7 +557,7 @@
             }
         });
         //video
-        var video = document.getElementById("myVideo");
+        var video = document.getElementById("video");
         var btn = document.getElementById("myBtn");
 
         function myFunction() {
@@ -567,7 +569,15 @@
                 btn.innerHTML = "Play";
             }
         }
+var vid = document.getElementById("video");
 
+function playVid() {
+  vid.play();
+}
+
+function pauseVid() {
+  vid.pause();
+}
         //burgermenu
         function myFunction() {
             var x = document.getElementById("myTopnav");
